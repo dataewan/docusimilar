@@ -1,0 +1,19 @@
+<h1>{{document.title}}</h1>
+
+<div id="content">
+    {% for sentence in document.sentences %}
+        <p>{{sentence}}</p>
+    {% endfor %}
+</div>
+
+
+<div id="related">
+    <ul>
+        {% for related in similar_documents %}
+        <li>
+            <a href="/item/{{related.idx}}">{{related.title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+    
